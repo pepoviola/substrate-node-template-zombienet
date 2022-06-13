@@ -1,0 +1,14 @@
+[relaychain]
+default_image = "docker.io/paritypr/polkadot-debug:master"
+default_command = "./target/release/node-template"
+default_args = ["--enable-offchain-indexing true"]
+
+chain = "local"
+
+  [[relaychain.nodes]]
+  name = "alice"
+  validator = true
+
+  [[relaychain.nodes]]
+  name = "bob"
+  validator = true
